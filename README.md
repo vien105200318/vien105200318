@@ -1,16 +1,22 @@
 ## Hi there 👋
 
-<!--
-**vien105200318/vien105200318** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I’m **Vien**, an **Indie Game Developer at Vai-Studio** and a **Freelance Web & Game Developer**.  
+I work on **web projects, community tools, and indie games**, sharing my creations with the world.
 
-Here are some ideas to get you started:
+### 💻 Skills
+- **Web Development:** HTML, CSS, JavaScript, React, Node.js, Tailwind, Supabase
+- **Game Development:** Unity, Phaser, Three.js, Godot, WebGL
+- **Tools & Others:** Git, GitHub, Figma, Blender (3D basics), AI tools for dev
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🔭 Current Projects
+- Indie games at **Vai-Studio**  
+- Freelance web apps and community projects
+
+### 🌱 Learning
+- Advanced WebGL & Three.js for webgame experiences  
+- AI-assisted game tools and automation
+
+### 📫 Contact / Support
+- GitHub: [github.com/vien105200318](https://github.com/vien105200318)  
+- Portfolio: [vai-studio.dev](https://vai-studio.dev)  
+- Buy Me a Coffee: [buymeacoffee.com/vienbb](https://www.buymeacoffee.com/vienbb)
