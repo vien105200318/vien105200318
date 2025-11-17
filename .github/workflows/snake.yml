@@ -1,7 +1,7 @@
 name: Generate Snake
 
 on:
-  schedule: # run every 12 hours
+  schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      # 1. Tạo thư mục dist trước để đảm bảo
+      - name: Create dist directory
+        run: mkdir dist
+        
+      # 2. Tạo Snake SVG
       - uses: Platane/snk@master
         id: snake-gif
         with:
@@ -19,9 +25,11 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      # 3. Triển khai lên branch 'output'
       - uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: dist # Thư mục chứa file SVG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
