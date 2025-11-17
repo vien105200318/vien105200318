@@ -18,5 +18,4 @@ I work on **web projects, community tools, and indie games**, sharing my creatio
 
 ### 📫 Contact / Support
 - GitHub: [github.com/vien105200318](https://github.com/vien105200318)  
-- Portfolio: [vai-studio.dev](https://vai-studio.dev)  
 - Buy Me a Coffee: [buymeacoffee.com/vienbb](https://www.buymeacoffee.com/vienbb)
