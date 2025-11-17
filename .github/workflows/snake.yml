@@ -1,9 +1,11 @@
-name: Generate Snake
+name: 🐍 Generate Snake Animation
 
 on:
   schedule:
+    # Chạy tự động sau mỗi 12 giờ
     - cron: "0 */12 * * *"
   workflow_dispatch:
+    # Cho phép chạy thủ công
 
 jobs:
   build:
@@ -11,25 +13,31 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # 1. Tạo thư mục dist trước để đảm bảo
+      # 1. Tạo thư mục 'dist' (Đảm bảo nó tồn tại)
       - name: Create dist directory
         run: mkdir dist
         
-      # 2. Tạo Snake SVG
-      - uses: Platane/snk@master
+      # 2. Tạo Snake SVG (Đã sửa lỗi tham số 'outputs')
+      - name: Generate the snake animation
+        uses: Platane/snk@master
         id: snake-gif
         with:
           github_user_name: vien105200318
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          # Tham số mới thay thế 'outputs'
+          svg_out_path: dist/github-contribution-grid-snake.svg
+          gif_out_path: dist/github-contribution-grid-snake.gif # Tùy chọn: Tạo thêm GIF
+          
         env:
+          # Cần thiết để Action truy cập vào dữ liệu GitHub
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       # 3. Triển khai lên branch 'output'
-      - uses: crazy-max/ghaction-github-pages@v2
+      # Bước này sẽ đẩy nội dung thư mục 'dist' lên branch 'output'
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: output
-          build_dir: dist # Thư mục chứa file SVG
+          build_dir: dist # Trỏ đến thư mục chứa file SVG/GIF đã tạo
         env:
+          # Cần quyền ghi (WRITE permission) để tạo/cập nhật branch output
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
