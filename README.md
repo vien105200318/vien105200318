@@ -53,7 +53,7 @@ I love sharing my creations and contributing to the development community!
 ## 🐍 My GitHub Activity Snake
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vien105200318/vien105200318/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" />
+  <img src="https://raw.githubusercontent.com/vien105200318/vien105200318/output/dist/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" />
 </p>
 
 ---
